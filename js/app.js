@@ -8,3 +8,11 @@ function addToCart(id) {
 
   alert(product.name + " added to cart");
 }
+
+
+function updateCartCount() {
+  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  document.getElementById("count").innerText = cart.length;
+}
+
+updateCartCount();
