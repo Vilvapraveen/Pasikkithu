@@ -1,1 +1,553 @@
-!
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jaya's Organic — Authentic Tamil Homemade Food</title>
+  <meta name="description" content="Premium organic Tamil homemade food from Jaya's kitchen in Chennai. Traditional podis, thokku, pickles made with love and no preservatives." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<!-- ══════════════════════════════════════
+     TOAST CONTAINER
+══════════════════════════════════════ -->
+<div id="toast-container"></div>
+
+<!-- ══════════════════════════════════════
+     NAVBAR
+══════════════════════════════════════ -->
+<nav id="navbar">
+  <div class="container nav-inner">
+    <!-- Logo -->
+    <a href="#" class="nav-logo">
+      <div class="nav-logo-icon">🍲</div>
+      <div>
+        <div class="nav-logo-name">Jaya's Organic</div>
+        <div class="nav-logo-sub">Authentic Tamil Food</div>
+      </div>
+    </a>
+
+    <!-- Desktop Links -->
+    <div class="nav-links">
+      <a href="#recipes">Recipes</a>
+      <a href="#products">Products</a>
+      <a href="#deals">Deals</a>
+      <a href="#about">Our Story</a>
+      <a href="#reviews">Reviews</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <!-- Actions -->
+    <div class="nav-actions">
+      <button class="nav-btn" onclick="openProfile()" title="My Account">👤</button>
+      <button class="nav-btn" title="Wishlist" style="position:relative">
+        🤍
+        <span id="wish-badge" class="nav-badge hidden">0</span>
+      </button>
+      <button class="nav-btn nav-btn-cart" onclick="openCart()" title="Cart" style="position:relative">
+        🛒
+        <span class="nav-badge cart-count hidden">0</span>
+      </button>
+      <a href="https://wa.me/919600572691" target="_blank" class="nav-wa">💬 Order</a>
+      <button class="nav-hamburger" onclick="toggleMobileMenu()">☰</button>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="mobile-menu">
+    <a href="#recipes" onclick="toggleMobileMenu()">🍽️ Recipes</a>
+    <a href="#products" onclick="toggleMobileMenu()">🛍️ Products</a>
+    <a href="#deals" onclick="toggleMobileMenu()">🔥 Deals</a>
+    <a href="#about" onclick="toggleMobileMenu()">📖 Our Story</a>
+    <a href="#reviews" onclick="toggleMobileMenu()">⭐ Reviews</a>
+    <a href="#contact" onclick="toggleMobileMenu()">📞 Contact</a>
+  </div>
+</nav>
+
+<!-- ══════════════════════════════════════
+     HERO
+══════════════════════════════════════ -->
+<section id="hero">
+  <div class="hero-glow"></div>
+  <div class="hero-ring1"></div>
+  <div class="hero-ring2"></div>
+
+  <!-- Floating Emojis -->
+  <div class="float-emoji" style="font-size:48px;top:15%;left:8%;animation-delay:0s">🌶️</div>
+  <div class="float-emoji" style="font-size:44px;top:20%;right:10%;animation-delay:1.5s">🫙</div>
+  <div class="float-emoji" style="font-size:40px;bottom:30%;left:5%;animation-delay:3s">🌿</div>
+  <div class="float-emoji" style="font-size:36px;top:60%;right:6%;animation-delay:2s">✨</div>
+  <div class="float-emoji" style="font-size:44px;bottom:20%;right:15%;animation-delay:0.8s">🥬</div>
+
+  <div class="container hero-content">
+    <!-- Badge -->
+    <div class="animate-fade-up">
+      <div class="hero-pill">🌱 Premium Organic Tamil Cuisine</div>
+    </div>
+
+    <!-- Headline -->
+    <h1 class="hero-h1 animate-fade-up delay-1">
+      Authentic<br />
+      <em>Tamil Homemade</em><br />
+      Food
+    </h1>
+
+    <!-- Subtitle -->
+    <p class="hero-sub animate-fade-up delay-2">
+      From Jaya's kitchen in Chennai — crafted with organic ingredients, traditional methods, and generations of Tamil culinary wisdom.
+    </p>
+
+    <!-- CTAs -->
+    <div class="hero-btns animate-fade-up delay-3">
+      <a href="#products" class="btn-primary" style="font-size:16px;padding:16px 40px">🛍️ Shop Products</a>
+      <a href="#recipes" class="btn-outline" style="font-size:16px;padding:14px 38px;color:rgba(255,255,255,0.8);border-color:rgba(255,255,255,0.3)">🍽️ Explore Recipes</a>
+    </div>
+
+    <!-- Stats -->
+    <div class="hero-stats animate-fade-up delay-4">
+      <div><div class="hero-stat-val">500+</div><div class="hero-stat-label">Happy Customers</div></div>
+      <div><div class="hero-stat-val">4.9★</div><div class="hero-stat-label">Avg Rating</div></div>
+      <div><div class="hero-stat-val">100%</div><div class="hero-stat-label">Organic</div></div>
+      <div><div class="hero-stat-val">15+</div><div class="hero-stat-label">Products</div></div>
+    </div>
+  </div>
+
+  <a href="#recipes" class="scroll-down">
+    <span>SCROLL</span>
+    <span>↓</span>
+  </a>
+</section>
+
+<!-- ══════════════════════════════════════
+     MARQUEE BANNER
+══════════════════════════════════════ -->
+<div id="marquee-banner">
+  <div class="marquee-track">
+    <!-- doubled for seamless loop -->
+    <span class="marquee-item">🌿 100% Organic Ingredients <span class="marquee-dot">◆</span></span>
+    <span class="marquee-item">🔥 No Preservatives <span class="marquee-dot">◆</span></span>
+    <span class="marquee-item">👩‍🍳 Traditional Recipes <span class="marquee-dot">◆</span></span>
+    <span class="marquee-item">🚚 Free Delivery Above ₹500 <span class="marquee-dot">◆</span></span>
+    <span class="marquee-item">⭐ 4.9 Star Rated <span class="marquee-dot">◆</span></span>
+    <span class="marquee-item">📦 Fresh Packaging <span class="marquee-dot">◆</span></span>
+    <span class="marquee-item">🌱 Farm to Table <span class="marquee-dot">◆</span></span>
+    <span class="marquee-item">💛 Made with Love in Chennai <span class="marquee-dot">◆</span></span>
+    <span class="marquee-item">🫙 No Artificial Colors <span class="marquee-dot">◆</span></span>
+    <span class="marquee-item">✅ Siddha Medicine Approved <span class="marquee-dot">◆</span></span>
+    <!-- repeat -->
+    <span class="marquee-item">🌿 100% Organic Ingredients <span class="marquee-dot">◆</span></span>
+    <span class="marquee-item">🔥 No Preservatives <span class="marquee-dot">◆</span></span>
+    <span class="marquee-item">👩‍🍳 Traditional Recipes <span class="marquee-dot">◆</span></span>
+    <span class="marquee-item">🚚 Free Delivery Above ₹500 <span class="marquee-dot">◆</span></span>
+    <span class="marquee-item">⭐ 4.9 Star Rated <span class="marquee-dot">◆</span></span>
+    <span class="marquee-item">📦 Fresh Packaging <span class="marquee-dot">◆</span></span>
+    <span class="marquee-item">🌱 Farm to Table <span class="marquee-dot">◆</span></span>
+    <span class="marquee-item">💛 Made with Love in Chennai <span class="marquee-dot">◆</span></span>
+    <span class="marquee-item">🫙 No Artificial Colors <span class="marquee-dot">◆</span></span>
+    <span class="marquee-item">✅ Siddha Medicine Approved <span class="marquee-dot">◆</span></span>
+  </div>
+</div>
+
+<!-- ══════════════════════════════════════
+     RECIPES
+══════════════════════════════════════ -->
+<section id="recipes" class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="badge badge-saffron">🍽️ Traditional Recipes</span>
+      <h2>Authentic <span class="gradient-text">Tamil Recipes</span></h2>
+      <p>From our kitchen to yours — traditional recipes using our homemade podis and thokkus.</p>
+    </div>
+    <div id="recipes-grid" class="recipes-grid"></div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     PRODUCTS
+══════════════════════════════════════ -->
+<section id="products" class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="badge badge-green">🌱 Our Products</span>
+      <h2>Handcrafted <span class="gradient-text">With Love</span></h2>
+      <p>Every product made in small batches with organic ingredients — no shortcuts, no preservatives.</p>
+    </div>
+
+    <!-- Category Filter -->
+    <div id="cat-filters" class="cat-filters"></div>
+
+    <!-- Products Grid -->
+    <div id="products-grid" class="products-grid"></div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     DEALS
+══════════════════════════════════════ -->
+<section id="deals" class="section">
+  <div class="deals-deco1"></div>
+  <div class="deals-deco2"></div>
+  <div class="container" style="position:relative;z-index:1">
+    <!-- Header -->
+    <div class="section-header">
+      <span class="badge" style="background:rgba(192,57,43,0.2);color:#FF6B6B;border:1px solid rgba(192,57,43,0.4)">🔥 Limited Time</span>
+      <h2>Flash Deals & <span style="background:linear-gradient(135deg,#E8862A,#F0C040);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">Combo Offers</span></h2>
+
+      <!-- Countdown -->
+      <div class="countdown-wrap" style="margin-top:16px">
+        <span class="countdown-label">Deal ends in:</span>
+        <div class="countdown-digits">
+          <div class="countdown-block">
+            <div id="cd-h" class="countdown-num">08</div>
+            <div class="countdown-unit">HRS</div>
+          </div>
+          <span class="countdown-colon">:</span>
+          <div class="countdown-block">
+            <div id="cd-m" class="countdown-num">23</div>
+            <div class="countdown-unit">MIN</div>
+          </div>
+          <span class="countdown-colon">:</span>
+          <div class="countdown-block">
+            <div id="cd-s" class="countdown-num">45</div>
+            <div class="countdown-unit">SEC</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Deals Grid -->
+    <div id="deals-grid" class="deals-grid"></div>
+
+    <!-- Bulk Order Callout -->
+    <div class="bulk-callout">
+      <div>
+        <div class="bulk-title">📦 Bulk Order Discount</div>
+        <div class="bulk-sub">Order 1kg+ of any product and get 15% off automatically.</div>
+      </div>
+      <a href="https://wa.me/919600572691?text=I'm interested in bulk ordering!" target="_blank" class="btn-primary">Request Bulk Quote</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     PROCESS
+══════════════════════════════════════ -->
+<section id="process" class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="badge badge-green">🌿 From Farm to Table</span>
+      <h2>Our <span class="gradient-text">Making Process</span></h2>
+    </div>
+
+    <div class="process-grid">
+      <div class="process-step">
+        <div class="process-icon">🌱</div>
+        <div class="process-num">STEP 01</div>
+        <div class="process-title">Organic Harvest</div>
+        <div class="process-desc">Fresh ingredients sourced from certified Tamil Nadu farms every 2 days.</div>
+      </div>
+      <div class="process-step">
+        <div class="process-icon">👩‍🍳</div>
+        <div class="process-num">STEP 02</div>
+        <div class="process-title">Traditional Prep</div>
+        <div class="process-desc">Cleaned, sun-dried or shade-dried using ancestral Siddha methods.</div>
+      </div>
+      <div class="process-step">
+        <div class="process-icon">🔥</div>
+        <div class="process-num">STEP 03</div>
+        <div class="process-title">Stone Ground</div>
+        <div class="process-desc">Slow roasted and ground in traditional stone mills for authentic texture.</div>
+      </div>
+      <div class="process-step">
+        <div class="process-icon">📦</div>
+        <div class="process-num">STEP 04</div>
+        <div class="process-title">Fresh Packed</div>
+        <div class="process-desc">Sealed in food-grade packaging and dispatched within 24 hours.</div>
+      </div>
+    </div>
+
+    <!-- Delivery Checker -->
+    <div class="delivery-checker">
+      <div class="delivery-icon">📍</div>
+      <div class="delivery-title">Check Delivery Availability</div>
+      <div class="delivery-sub">Enter your PIN code to check if we deliver to your area.</div>
+      <div class="delivery-input-row">
+        <input id="pincode-input" class="input" placeholder="Enter PIN code" maxlength="6" type="tel" />
+        <button class="btn-primary" onclick="checkPincode()" style="white-space:nowrap">Check →</button>
+      </div>
+      <div id="delivery-result" class="delivery-result" style="display:none"></div>
+      <div class="delivery-areas" style="margin-top:24px">
+        <div class="delivery-areas-title">Same-Day Areas</div>
+        <div class="area-chips">
+          <span class="area-chip">T. Nagar</span>
+          <span class="area-chip">Adyar</span>
+          <span class="area-chip">Velachery</span>
+          <span class="area-chip">Anna Nagar</span>
+          <span class="area-chip">Mylapore</span>
+          <span class="area-chip">Nungambakkam</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     REVIEWS
+══════════════════════════════════════ -->
+<section id="reviews" class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="badge badge-saffron">⭐ Customer Love</span>
+      <h2>What Families <span class="gradient-text">Say About Us</span></h2>
+      <p>Real reviews from real customers who trust Jaya's Organic every day.</p>
+    </div>
+
+    <!-- Rating Widgets -->
+    <div class="rating-widgets">
+      <div class="rating-score-box">
+        <div class="rating-big">4.9</div>
+        <div class="rating-stars">★★★★★</div>
+        <div class="rating-total">Based on 700+ reviews</div>
+      </div>
+      <div class="rating-bars-box">
+        <div class="rating-bar-row"><span class="rating-bar-label">5</span><div class="progress-bar"><div class="progress-fill" style="width:88%"></div></div><span class="rating-bar-pct">88%</span></div>
+        <div class="rating-bar-row"><span class="rating-bar-label">4</span><div class="progress-bar"><div class="progress-fill" style="width:9%"></div></div><span class="rating-bar-pct">9%</span></div>
+        <div class="rating-bar-row"><span class="rating-bar-label">3</span><div class="progress-bar"><div class="progress-fill" style="width:2%"></div></div><span class="rating-bar-pct">2%</span></div>
+        <div class="rating-bar-row"><span class="rating-bar-label">2</span><div class="progress-bar"><div class="progress-fill" style="width:1%"></div></div><span class="rating-bar-pct">1%</span></div>
+        <div class="rating-bar-row"><span class="rating-bar-label">1</span><div class="progress-bar"><div class="progress-fill" style="width:0%"></div></div><span class="rating-bar-pct">0%</span></div>
+      </div>
+    </div>
+
+    <!-- Reviews Grid -->
+    <div id="reviews-grid" class="reviews-grid"></div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     ABOUT
+══════════════════════════════════════ -->
+<section id="about" class="section">
+  <div class="container">
+    <div class="about-grid">
+      <!-- Image -->
+      <div class="about-img-wrap">
+        <div class="about-img">
+          <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=600&h=500&fit=crop" alt="Jaya's Kitchen" loading="lazy" />
+        </div>
+        <div class="about-float-card">
+          <div class="about-float-icon">🏆</div>
+          <div>
+            <div style="font-weight:700;font-size:16px">500+ Happy Families</div>
+            <div style="font-size:12px;color:var(--text-muted)">Since 2020, Chennai</div>
+          </div>
+        </div>
+        <div class="about-tag">Homemade with ❤️</div>
+      </div>
+
+      <!-- Text -->
+      <div class="about-text">
+        <span class="badge badge-green" style="margin-bottom:20px">📖 Our Story</span>
+        <h2>From Jaya's Kitchen<br /><span class="gradient-text">to Your Table</span></h2>
+        <p>In 2020, during lockdown, Jaya realized her family's traditional recipes — passed down through four generations — were at risk of being forgotten. She began making small batches of Pirandai Thokku and Idli Podi to share with neighbors.</p>
+        <p>Word spread. What started as gifting turned into orders. Today, Jaya's Organic serves 500+ families with the same love, the same recipes, and the same promise: <strong>no shortcuts, no preservatives, no compromise.</strong></p>
+
+        <div class="values-grid">
+          <div class="value-card"><div class="value-emoji">🌱</div><div class="value-title">Farm-Direct</div><div class="value-desc">Ingredients sourced directly from Tamil Nadu organic farms</div></div>
+          <div class="value-card"><div class="value-emoji">👩‍🍳</div><div class="value-title">Handmade</div><div class="value-desc">Every batch made in small quantities for freshness</div></div>
+          <div class="value-card"><div class="value-emoji">🚫</div><div class="value-title">No Preservatives</div><div class="value-desc">Zero artificial additives, colors or preservatives</div></div>
+          <div class="value-card"><div class="value-emoji">📿</div><div class="value-title">Siddha Wisdom</div><div class="value-desc">Recipes rooted in 3000 years of Tamil medicine</div></div>
+        </div>
+
+        <a href="https://wa.me/919600572691?text=Tell me more about Jaya's Organic!" target="_blank" class="btn-primary" style="font-size:16px">💬 Say Hello to Jaya</a>
+      </div>
+    </div>
+
+    <!-- Timeline -->
+    <div class="timeline">
+      <h3>Our Journey</h3>
+      <div class="timeline-items">
+        <div class="timeline-item"><div class="timeline-dot">20</div><div class="timeline-year">2020</div><div class="timeline-label">Founded</div><div class="timeline-desc">Started in Jaya's home kitchen with 3 products</div></div>
+        <div class="timeline-item"><div class="timeline-dot">21</div><div class="timeline-year">2021</div><div class="timeline-label">First 100 Customers</div><div class="timeline-desc">Word spread through Chennai families</div></div>
+        <div class="timeline-item"><div class="timeline-dot">22</div><div class="timeline-year">2022</div><div class="timeline-label">Went Online</div><div class="timeline-desc">Launched online with home delivery</div></div>
+        <div class="timeline-item"><div class="timeline-dot">23</div><div class="timeline-year">2023</div><div class="timeline-label">500+ Customers</div><div class="timeline-desc">Now serving customers across Tamil Nadu</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════
+     CONTACT
+══════════════════════════════════════ -->
+<section id="contact" class="section">
+  <div class="container">
+    <div class="section-header">
+      <span class="badge badge-saffron">📞 Get in Touch</span>
+      <h2>Let's <span class="gradient-text">Talk Food</span></h2>
+      <p>Questions, bulk orders, or just want to say hello — we'd love to hear from you.</p>
+    </div>
+
+    <div class="contact-grid">
+      <!-- Info -->
+      <div class="contact-info">
+        <h3>Reach Us</h3>
+        <a href="tel:+919600572691" class="contact-item">
+          <div class="contact-icon">📱</div>
+          <div><div class="contact-label">WhatsApp / Phone</div><div class="contact-val">+91 96005 72691</div></div>
+        </a>
+        <a href="mailto:lokesh967755@gmail.com" class="contact-item">
+          <div class="contact-icon">✉️</div>
+          <div><div class="contact-label">Email</div><div class="contact-val">lokesh967755@gmail.com</div></div>
+        </a>
+        <a href="https://maps.app.goo.gl/5TdKRkM8AtprjDK49" target="_blank" class="contact-item">
+          <div class="contact-icon">📍</div>
+          <div><div class="contact-label">Location</div><div class="contact-val">Chennai, Tamil Nadu</div></div>
+        </a>
+        <div class="contact-btns">
+          <a href="https://wa.me/919600572691" target="_blank" class="contact-wa-btn">💬 Order on WhatsApp</a>
+          <a href="tel:+919600572691" class="contact-call-btn">📞 Call to Order</a>
+        </div>
+      </div>
+
+      <!-- Form -->
+      <div class="contact-form">
+        <h3>Send a Message</h3>
+        <form onsubmit="handleContact(event)">
+          <div class="form-row">
+            <input id="cf-name" class="input" placeholder="Your Name" require/>
+            <input id="cf-phone" class="input" placeholder="Phone Number" required type="tel" />
+          </div>
+          <div class="form-mb">
+            <input class="input" type="email" placeholder="Email Address (optional)" />
+          </div>
+          <div class="form-mb-24">
+            <textarea id="cf-msg" class="input" rows="5" placeholder="Your message or order details..." required></textarea>
+            
+══════════════════════════════════════ -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <!-- Brand -->
+      <div>
+        <div class="footer-brand">
+          <div class="footer-brand-icon">🍲</div>
+          <span class="footer-brand-name">Jaya's Organic</span>
+        </div>
+        <p class="footer-tagline">Authentic Tamil homemade food made with love, tradition, and organic goodness from Chennai.</p>
+        <a href="https://wa.me/919600572691" target="_blank" class="footer-wa-btn">💬 Order on WhatsApp</a>
+      </div>
+ 
+      <!-- Quick Links -->
+      
+          </div>
+          <button type="submit" class="btn-primary form-submit">💬 Send via WhatsApp</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+<!-- ══════════════════════════════════════
+     FOOTER
+  
+      <div>
+        <div class="footer-col-title">Quick Links</div>
+        <ul class="footer-links">
+          <li><a href="#recipes">Recipes</a></li>
+          <li><a href="#products">Our Products</a></li>
+          <li><a href="#deals">Deals & Combos</a></li>
+          <li><a href="#about">Our Story</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#contact">Contact Us</a></li>
+        </ul>
+      </div>
+ 
+      <!-- Products -->
+      
+      <div>
+        <div class="footer-col-title">Products</div>
+        <ul class="footer-links">
+          <li><a href="#products">Podis</a></li>
+          <li><a href="#products">Thokkus</a></li>
+          <li><a href="#products">Pickles</a></li>
+          <li><a href="#deals">Gift Hampers</a></li>
+          <li><a href="#contact">Bulk Orders</a></li>
+        </ul>
+      </div>
+ 
+      <!-- Newsletter -->
+      <div>
+        <div class="footer-col-title">Stay in Touch</div>
+        <p class="newsletter-label">Get recipes, seasonal specials and exclusive offers delivered to your inbox.</p>
+        <form onsubmit="handleNewsletter(event)">
+          <div class="newsletter-row">
+            <input class="newsletter-input" type="email" placeholder="your@email.com" required />
+            <button type="submit" class="newsletter-btn">Subscribe</button>
+          </div>
+        </form>
+      </div>
+    </div>
+ 
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2025 Jaya's Organic. All rights reserved.</div>
+      <div class="footer-made">Made with ❤️ in Chennai, Tamil Nadu</div>
+    </div>
+  </div>
+</footer>
+  
+<!-- ══════════════════════════════════════
+     CART PANEL
+══════════════════════════════════════ -->
+<div id="cart-overlay" class="modal-overlay hidden" onclick="closeCart()"></div>
+<div id="cart-panel" class="cart-panel hidden">
+  <div class="cart-header">
+    <div class="cart-title">🛒 My Cart</div>
+    <button class="cart-close-btn" onclick="closeCart()">✕</button>
+  </div>
+  <div id="cart-body" class="cart-body"></div>
+  <div id="cart-footer" class="cart-footer hidden">
+    <div class="cart-total-row">
+      <span class="cart-total-label">Total</span>
+      <span class="cart-total-val" id="cart-total">₹0</span>
+      
+      
+    </div>
+    <div id="cart-savings" class="cart-save-row" style="display:none"></div>
+    <button class="btn-green cart-checkout-btn" onclick="checkoutWhatsApp()">💬 Order via WhatsApp</button>
+    <button class="cart-clear-btn" onclick="clearCart()">Clear Cart</button>
+  </div>
+</div>
+ 
+<!-- ══════════════════════════════════════
+     PROFILE MODAL
+══════════════════════════════════════ -->
+<div id="profile-overlay" class="modal-overlay hidden" onclick="closeProfile()">
+  <div class="profile-modal-box" onclick="event.stopPropagation()">
+    <div class="profile-modal-inner">
+      <div class="profile-avatar">👤</div>
+      <div class="profile-title">My Account</div>
+      <button class="profile-menu-item"><span class="profile-menu-emoji">📋</span> Order History</button>
+      <button class="profile-menu-item"><span class="profile-menu-emoji">❤️</span> Wishlist</button>
+            <button class="profile-menu-item"><span class="profile-menu-emoji">🔔</span> Notifications</button>
+      <button class="profile-menu-item"><span class="profile-menu-emoji">🎁</span> Refer & Earn</button>
+      <a href="https://wa.me/919600572691?text=Hi! I need customer support." target="_blank" class="btn-green" style="width:100%;justify-content:center;margin-top:4px">💬 Customer Support</a>
+      <button class="profile-close-btn" onclick="closeProfile()">Close</button>
+    </div>
+  </div>
+</div>
+ 
+<!-- ══════════════════════════════════════
+     FLOATING BUTTONS
+══════════════════════════════════════ -->
+<div class="fab-group">
+  <a href="https://wa.me/919600572691?text=Hi! I want to order from Jaya's Organic 🍲" target="_blank" class="fab fab-wa" title="WhatsApp Order">💬</a>
+  <button class="fab fab-cart" onclick="openCart()" title="Cart">
+    🛒
+    <span class="fab-cart-badge cart-count hidden">0</span>
+  </button>
+</div>
+ 
+<script src="script.js"></script>
+</body>
+</html>
+ 
