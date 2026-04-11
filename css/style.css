@@ -357,7 +357,7 @@ button { font-family: 'DM Sans', sans-serif; cursor: pointer; }
 }
 .countdown-num { font-family: 'DM Mono', monospace; font-size: 24px; font-weight: 700; color: var(--saffron-light); line-height: 1; }
 .countdown-unit { font-size: 9px; color: rgba(255,255,255,0.4); letter-spacing: 0.1em; text-transform: uppercase; }
-.countdown-colon { color: var(--saffron); font-weight: 800; font-size: 20px; }
+.countdow-colon { color: var(--saffron); font-weight: 800; font-size: 20px; }
 .deals-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; margin-bottom: 48px; }
 .deal-card {
   background: rgba(255,255,255,0.05); border: 1px solid rgba(232,134,42,0.2);
@@ -655,5 +655,4 @@ footer { background: var(--dark); color: white; padding: 72px 0 36px; }
   .about-float-card { display: none; }
   .cart-panel { max-width: 100%; }
   .delivery-input-row { flex-direction: column; }
-         }
-
+}
